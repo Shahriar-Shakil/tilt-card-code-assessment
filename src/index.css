@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600&family=Roboto:wght@100;300;400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  body {
+    font-family: "Pixelify Sans", cursive;
+  }
+  .pixelButton:after {
+    @apply content-[""] block absolute z-[-1] -inset-x-1.5 inset-y-1;
+  }
+  .pixelButton:before {
+    @apply content-[""] block absolute z-[-1] -inset-x-2.5 inset-y-2.5;
+  }
+  .primary {
+    @apply bg-primary after:bg-primary before:bg-primary;
+  }
+  .purple {
+    @apply bg-purple after:bg-purple before:bg-purple;
+  }
+  .green {
+    @apply bg-green after:bg-green before:bg-green;
+  }
+}
